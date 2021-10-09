@@ -30,7 +30,8 @@
 　　        <%= render partial: "favorites/favorite", locals: {book: @book} %>
 　          </td>
           
-           <td>コメント数：<%= @book.book_comments.count %></td>
+         
+          <td id="comments-count">コメント数: <%= @book.book_comments.count %></td>
           
           
           
