@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @book = Book.new
-    @books = @user.books
+    @books = @user.books#自身で投稿した本たちの一覧
     
   end
    
@@ -22,11 +22,7 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
-    if @user == current_user
-        render "edit"
-    else
-      redirect_to user_path(current_user)
-    end
+
   end
   
   def update

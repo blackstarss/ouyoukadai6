@@ -23,6 +23,7 @@ class BooksController < ApplicationController
       
     @book = Book.new(book_params)
     @book.user_id = current_user.id
+    #投稿者とログインユーザをひも付ける
     # 
     if @book.save
       
